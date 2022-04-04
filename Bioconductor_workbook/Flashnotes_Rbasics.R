@@ -183,6 +183,6 @@ library(methods)
 as(x, "matrix") #put your non-conventional conversion function command between "". so when using bioconductors, instead of matrix you'll type other object functions generally used for our data)
 
 
-##-----------------------------------------------------------------------------------------END OF LECTURE------------------------------------------------------------------------------------------
+##-----------------------------------------------------------------------------------------END OF SECTION------------------------------------------------------------------------------------------
 
 
