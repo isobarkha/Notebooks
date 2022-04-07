@@ -1,14 +1,12 @@
 #Do i have bioconductor already installed?
 BiocManager::available()
 
-#I didn't have it installed already. So I used the code below
-#Install Bioconductor using BiocManager instead of BiocLite since version>3.7
+#Install Bioconductor (if not already) using BiocManager instead of BiocLite since version>3.7
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 BiocManager::install()
 
 BiocManager::install("Biostrings")
-
 BiocManager::install("IRanges")
 
 
@@ -49,8 +47,7 @@ length(ir2) #Note that this indicates the no. of vertical columns not the width 
 ##Concatenate IRanges
 c(ir1,ir2)
 
-
-#!!!!!!!!!!!!!!!!!!!!!#What is a Normal IRange?? mentions around 2:30
+#What is a Normal IRange?? 
 
 
 ##Plotting an IRange
