@@ -84,10 +84,10 @@ plotRanges(disjoin(ir))
 
 ##---Resize---
 ir
-#Resizing to a width of 1 where the start is fixed
+#---Resizing to a width of 1 where the start is fixed---
 resize(ir, width = 1, fix = "start")
 
-#Resizing to a width of 1 where the center is fixed
+#---Resizing to a width of 1 where the center is fixed---
 resize(ir, width = 3, fix = "center")
 
 ##---Union or Intersection of IRanges---
