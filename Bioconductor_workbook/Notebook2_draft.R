@@ -31,3 +31,9 @@ seqinfo(gr) #Not much. Let's fill more info and check later. Note that 'my chrom
 ##--- ---
 ##--- ---
 ##--- ---
+
+##---Define Length---
+seqlengths(gr) = c("chr1" = 10)
+seqinfo(gr)
+seqlevels(gr)
+#since a length end of chromosome is also defined now, we can talk of attribtes that are relative to chromosome as a whole
