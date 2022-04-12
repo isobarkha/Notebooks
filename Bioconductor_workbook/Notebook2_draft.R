@@ -72,4 +72,15 @@ seqlengths(gr) = c("chr1" = 10)
 seqinfo(gr)
 seqlevels(gr)
 #since a length end of chromosome is also defined now, we can talk of attribtes that are relative to chromosome as a whole
->>>>>>> e14942cc51980dbe11ddd5a58d3d776ba1c381cf
+
+
+#--- Adding more chromosomes---
+seqnames(gr) = c("chr1", "chr2", "chr1") #gives an error because it has recorded that this hypothetical organism only has a single chromosome <Error in .normalize_seqnames_replacement_value(value, x) : levels of supplied 'seqnames' must be identical to 'seqlevels(x)'>
+#Resolve this by either redefining a new object from start OR BETTER, by defining new seqlevels as given below
+seqlevels(gr) = c("chr1", "chr2") #Now it nknows that seqnames can take 2 different values/levels
+seqnames(gr) = c("chr1", "chr2", "chr1")
+gr
+
+#--- Is my genome circular ---
+isCircular(gr) = c(FALSE, TRUE) 
+seqinfo(gr)
