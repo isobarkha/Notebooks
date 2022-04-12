@@ -84,3 +84,18 @@ gr
 #--- Is my genome circular ---
 isCircular(gr) = c(FALSE, TRUE) 
 seqinfo(gr)
+
+#---Add a new genome---
+gr2 = gr #This made a copy of gr and stored it as gr2 which can be modified as below to make changes on desired positions on gr
+genome(gr2) = "hg18" #so gr2 is a copy of gr but I changed what info this genome is from
+seqinfo(gr2)
+
+##-----FindOverlaps between GRanges-----
+findOverlaps(gr,gr2) #Now this gives an error saying "hey! we tried to compare both genes against each other but you're trying to compare 2 genes of different chromosomes so we can't find "overlaps". This is not a sequence similarity run like BLAST.
+
+##-----View in Asc/Descending order-----
+sort(gr)
+
+##-----Gaps on my chromosome-----
+#Gaps is a function that will give all the area on chromosome that is not covered by ranges in the GRanges
+gaps(gr)
